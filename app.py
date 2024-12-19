@@ -2,7 +2,7 @@ import streamlit as st
 import sqlite3
 import pandas as pd
 from datetime import datetime, date
-from num2words import num2words
+
 import os
 import pdfkit  # Add this import at the top
 import subprocess  # Add this import at the top
@@ -335,7 +335,7 @@ def generate_invoice_html(invoice_no, customer_name, customer_phone, items):
                 <td>₹ {total_value:.2f}</td>
             </tr>
             <tr>
-                <td colspan="7">Total in words: {num2words(int(total_value), lang='en_IN').title()} Rupees Only</td>
+                <td colspan="7">Total in words: {total_value} Rupees Only</td>
             </tr>
         </table>
     </div>
